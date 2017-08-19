@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Poslaju;
+use Achmadfatoni\Poslaju\Poslaju;
 
 class TrackController extends Controller
 {
