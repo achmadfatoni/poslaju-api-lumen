@@ -2,29 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
+
 class TrackController extends Controller
 {
     public function __invoke($id)
     {
         $url = "http://poslaju.com.my/track-trace-v2/"; # url of poslaju tracking website
         # store post data into array (poslaju website only receive the tracking no with POST, not GET. So we need to POST data)
-        $postdata = http_build_query(
-            array(
+        $client = new Client();
+        $res = $client->request('POST', $url, [
+            'form_params' => [
                 'trackingNo03' => $id,
                 'hvtrackNoHeader03' => '',
                 'hvfromheader03' => 0,
-            )
-        );
-        # use cURL instead of file_get_contents(), this is because on some server, file_get_contents() cannot be used
-        # cURL also have more options and customizable
-        $ch = curl_init(); # initialize curl object
-        curl_setopt($ch, CURLOPT_URL, $url); # set url
-        curl_setopt($ch, CURLOPT_POST, 1); # set option for POST data
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata); # set post data array
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); # receive server response
-        $result = curl_exec($ch); # execute curl, fetch webpage content
-        $httpstatus = curl_getinfo($ch, CURLINFO_HTTP_CODE); # receive http response status
-        curl_close($ch);  # close curl
+            ]
+        ]);
+
+        $httpstatus = $res->getStatusCode();
+        $result = $res->getBody();
 
         # using regex (regular expression) to parse the HTML webpage.
         # we only want to good stuff
