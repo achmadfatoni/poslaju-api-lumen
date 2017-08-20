@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Achmadfatoni\Poslaju\Poslaju;
+use Achmadfatoni\PoslajuLaravel\Poslaju;
 
 class TrackController extends Controller
 {
     public function __invoke($id)
     {
-        $trackResult = (new Poslaju())->track($id);
+        $trackResult = Poslaju::track($id);
         return response()->json($trackResult);
     }
 

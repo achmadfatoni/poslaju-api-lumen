@@ -4,20 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "70ecd6bf8e259ec22438874fde5778cd",
+    "content-hash": "9f6c0c4d1aca741261b1f81e62b8c3dd",
     "packages": [
+        {
+            "name": "achmadfatoni/poslajularavel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/achmadfatoni/poslaju-laravel.git",
+                "reference": "0025378df449b838f1ba1fef3817d29c42b67e8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/achmadfatoni/poslaju-laravel/zipball/0025378df449b838f1ba1fef3817d29c42b67e8c",
+                "reference": "0025378df449b838f1ba1fef3817d29c42b67e8c",
+                "shasum": ""
+            },
+            "require": {
+                "achmadfatoni/poslajuphp": "dev-master",
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Achmadfatoni\\PoslajuLaravel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Achmad Fatoni",
+                    "email": "hi@achmadfatoni.com"
+                }
+            ],
+            "description": "Package for tracking poslaju package",
+            "keywords": [
+                "parcel",
+                "poslaju",
+                "tracking"
+            ],
+            "time": "2017-08-20T11:57:00+00:00"
+        },
         {
             "name": "achmadfatoni/poslajuphp",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/achmadfatoni/poslaju-php.git",
-                "reference": "5ff1188623d724f8f8e85fd2933f006be754c129"
+                "reference": "6b8425827aa15384bcf2d9bb2ea695692b37868c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/achmadfatoni/poslaju-php/zipball/5ff1188623d724f8f8e85fd2933f006be754c129",
-                "reference": "5ff1188623d724f8f8e85fd2933f006be754c129",
+                "url": "https://api.github.com/repos/achmadfatoni/poslaju-php/zipball/6b8425827aa15384bcf2d9bb2ea695692b37868c",
+                "reference": "6b8425827aa15384bcf2d9bb2ea695692b37868c",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +91,7 @@
                 "poslaju",
                 "tracking"
             ],
-            "time": "2017-08-19T15:13:15+00:00"
+            "time": "2017-08-19T15:51:55+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -3076,16 +3118,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "ecb0b2cdaa0add708fe6f329ef65ae0c5225130b"
+                "reference": "9a02332089ac48e704c70f6cefed30c224e3c0b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/ecb0b2cdaa0add708fe6f329ef65ae0c5225130b",
-                "reference": "ecb0b2cdaa0add708fe6f329ef65ae0c5225130b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/9a02332089ac48e704c70f6cefed30c224e3c0b0",
+                "reference": "9a02332089ac48e704c70f6cefed30c224e3c0b0",
                 "shasum": ""
             },
             "require": {
@@ -3121,7 +3163,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-08-03T14:17:41+00:00"
+            "time": "2017-08-20T05:47:52+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -3886,7 +3928,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "achmadfatoni/poslajuphp": 20
+        "achmadfatoni/poslajularavel": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
